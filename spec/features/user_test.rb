@@ -13,6 +13,9 @@ feature 'Users' do
     create_user_with("d","test@yopmail.com")
     expect(page).to have_content 'User was successfully created.'
     expect(page).to have_content 'test@yopmail.com'
+    expect(page).to have_link("Edit") 
+    expect(page).to have_link("Back") 
+    expect(page).to have_no_link("Delete") 
   end
 
 
